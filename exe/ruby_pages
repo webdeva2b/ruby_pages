@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "rackup"
+# require "ruby_pages"
+require_relative "../lib/ruby_pages"
+
+options = Rackup::Server::Options.new.parse!(ARGV)
+
+Rackup::Server.start(options.merge(app: RubyPages))
