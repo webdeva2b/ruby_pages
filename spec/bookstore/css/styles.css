@@ -1,0 +1,114 @@
+/* Resetting default browser styles */
+body, h1, h2, h3, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic typography */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Adjust color as needed */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #007bff; /* Adjust link color as needed */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px; /* Adjust max width as needed */
+}
+
+/* Basic layout */
+.header {
+  background-color: lightgoldenrodyellow; /* Adjust header background color */
+}
+
+.header h2 {
+  float: left;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.header nav {
+  float: left;
+  margin-left: 10px;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightgoldenrodyellow;
+}
+
+.header li {
+  float: left;
+}
+
+.header li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color: whitesmoke;
+}
+
+.footer {
+  background-color: lightgoldenrodyellow; /* Adjust footer background color */
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+
+.main-content {
+  padding: 20px 0;
+  flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+}

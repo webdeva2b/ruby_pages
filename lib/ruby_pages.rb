@@ -18,21 +18,25 @@ module RubyPages
       os_path = File.join(os_path, "index.html")
       ext = ".html"
     end
-    render_file(os_path, ext)
+    render_file(env, os_path, ext)
   end
 
-  def self.render_file(filename, ext)
-    return render_404 unless ALLOWED_EXTNAMES.include?(ext) && File.file?(filename)
+  def self.render_file(env, filename, ext)
+    return render_404(env) unless ALLOWED_EXTNAMES.include?(ext) && File.file?(filename)
     body = File.read(filename)
     if ext == ".html" || ext == ".json"
-      body = ERB.new(body).result(binding)
+      bind = binding
+      bind.local_variable_set("env", env)
+      body = ERB.new(body).result(bind)
     end
     [200, headers(ext), [body]]
   end
 
-  def self.render_404
+  def self.render_404(env)
     file404 = File.join(Dir.getwd, "404.html")
-    body = File.file?(file404) ? File.read(file404) : "Page Not Found Error."
+    bind = binding
+    bind.local_variable_set("env", env)
+    body = File.file?(file404) ? ERB.new(File.read(file404)).result(bind) : "Page Not Found Error."
     [404, {"content-type" => "text/html"}, [body]]
   end
 

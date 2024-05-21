@@ -2,23 +2,76 @@
 
 Simple Ruby Web Framework designed mainly for learning Web Development for everyone. Inspired by PHP. To make a new Web page just create an html file which supports ERB. E.g. for https:://yoursite.com/products.html create page products.html with any Ruby code.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_pages`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Ruby programming language should be installed.
 
-Install the gem and add to the application's Gemfile by executing:
+Install the gem by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install ruby_pages
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+## Usage Examples
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+Create any HTML site that supports Ruby code in HTML/JSON pages using ERB:
 
-## Usage
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Ruby Code - Example</title>
+</head>
+<body>
+  <h1>Server Time:</h1>
 
-TODO: Write usage instructions here
+  <%= Time.now %>
+
+  <p>Reload the page to get current time.</p>
+</body>
+</html>
+~~~
+
+Loop through collection:
+
+~~~html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop through collection - Example</title>
+</head>
+<body>
+  <h1>Users</h1>
+
+  <% users = [{name: "Alice"}, {name: "Bob"}] %>
+
+  <% for user in users %>
+    <p>USER: <%= user[:name] %></p>
+  <% end %>
+</body>
+</html>
+~~~
+
+## Templates Rendering
+
+Create files `templates/header.html`, `templates/footer.html` containing site header and footer HTML respectively. Reuse the code in any HTML page:
+
+~~~html
+<%= render "templates/header", title: "About Us" %>
+
+<h1>About Us</h1>
+<p>Welcome to our bookstore! We are passionate about books and believe in the power of storytelling to inspire, educate, and entertain. Our mission is to provide a curated selection of quality books that cater to diverse interests and preferences.</p>
+<p>At Bookstore, we strive to create a welcoming and inclusive environment where book lovers of all ages can explore new worlds, discover hidden gems, and connect with fellow enthusiasts. Whether you're a seasoned bibliophile or just beginning your reading journey, we're here to help you find your next great read.</p>
+<p>Thank you for choosing Bookstore as your destination for literary adventures. We look forward to serving you and being a part of your reading adventures!</p>
+
+<%= render "templates/footer" %>
+~~~
+
+## More Examples
+
+See site example: https://github.com/webdeva2b/bookstore-ruby_pages-example-app
 
 ## Development
 
