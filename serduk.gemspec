@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Simple Ruby Web Framework"
   spec.description = "Simple Ruby Web Framework designed mainly for learning Web Development for everyone. Inspired by PHP. To make a new Web page just create an html file which supports ERB. E.g. for https:://yoursite.com/products.html create page products.html with any Ruby code."
-  spec.homepage = "https://github.com/shhavel/ruby_pages"
+  spec.homepage = "https://github.com/webdeva2b/ruby_pages/tree/serduk"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/shhavel/ruby_pages"
-  spec.metadata["changelog_uri"] = "https://github.com/shhavel/ruby_pages/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/webdeva2b/ruby_pages/tree/serduk"
+  spec.metadata["changelog_uri"] = "https://github.com/webdeva2b/ruby_pages/blob/serduk/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
