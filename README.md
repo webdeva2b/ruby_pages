@@ -81,7 +81,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/shhavel/serduk.
+Bug reports and pull requests are welcome on GitHub at https://github.com/webdeva2b/ruby_pages/tree/serduk.
 
 ## License
 
