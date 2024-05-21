@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-require "ruby_pages"
+require "serduk"
 require "rack/test"
-# require "capybara/rspec"
 require "pry"
 
 RSpec.configure do |config|

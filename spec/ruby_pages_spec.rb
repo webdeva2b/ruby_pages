@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe "Example HTML site", type: :request do
-  let(:app) { RubyPages }
+  let(:app) { Serduk }
   before do
     bookstore_working_dir = File.join(__dir__, "bookstore")
     allow(Dir).to receive(:getwd).and_return(bookstore_working_dir)

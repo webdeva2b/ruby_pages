@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/ruby_pages/version"
+require_relative "lib/serduk/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "ruby_pages"
-  spec.version = RubyPages::VERSION
+  spec.name = "serduk"
+  spec.version = Serduk::VERSION
   spec.authors = ["Oleksandr Avoiants"]
   spec.email = ["shhavel@gmail.com"]
 

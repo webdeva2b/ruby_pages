@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "ruby_pages/version"
+require_relative "serduk/version"
 
-module RubyPages
+module Serduk
   class MissingTemplateError < StandardError; end
   ALLOWED_EXTNAMES = Set.new(%w[.html .htm .css .ico .txt .jpg .jpeg .png .svg .webmanifest]).freeze
   FORBIDDEN_PATH_FRAGMENTS = ["", ".", ".."].freeze

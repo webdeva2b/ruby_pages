@@ -1,4 +1,4 @@
-# RubyPages
+# Serduk (SErving Ruby Directory Universal Kit)
 
 Simple Ruby Web Framework designed mainly for learning Web Development for everyone. Inspired by PHP. To make a new Web page just create an html file which supports ERB. E.g. for https:://yoursite.com/products.html create page products.html with any Ruby code.
 
@@ -8,7 +8,7 @@ Ruby programming language should be installed.
 
 Install the gem by executing:
 
-    $ gem install ruby_pages
+    $ gem install serduk
 
 ## Usage Examples
 
@@ -81,7 +81,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/shhavel/ruby_pages.
+Bug reports and pull requests are welcome on GitHub at https://github.com/shhavel/serduk.
 
 ## License
 
