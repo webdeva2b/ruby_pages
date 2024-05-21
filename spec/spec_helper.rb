@@ -2,7 +2,6 @@
 
 require "ruby_pages"
 require "rack/test"
-# require "capybara/rspec"
 require "pry"
 
 RSpec.configure do |config|
